@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTrash, FaCheckCircle } from "react-icons/fa";
 
 const Todo = ({text, todos, todo, setTodos}) => {
     const deleteHandler = () => {
@@ -23,8 +24,13 @@ const Todo = ({text, todos, todo, setTodos}) => {
     return(
         <div className="todo">
             <li className={`todo-item ${todo.completed ? "completed": ""}`}>{text}</li>
-            <button onClick={completeHandler} className='completed-btn' >+</button>
-            <button onClick={deleteHandler} className='trash-btn'>X</button>
+            <button onClick={completeHandler} className='completed-btn' >
+            <FaCheckCircle style={{ fontSize: '20px'}} />
+            
+            </button>
+            <button onClick={deleteHandler} className='trash-btn'>
+                <FaTrash style={{fontSize: '20px'}} />
+            </button>
        </div>
 
     );

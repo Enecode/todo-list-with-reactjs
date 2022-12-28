@@ -118,14 +118,15 @@ select {
 }
 
 .todo-item {
-  padding: 0rem 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.fa-check, .fa-trash {
- pointer-events: none;
+FaCheck, FaTrash {
+  margin-right: 1rem; 
 }
 
-.fa-trash, .fa-check {
+FaCheck, FaTrash  {
   pointer-events: none;
 }
 
@@ -146,6 +147,8 @@ select {
 
 .todo li{
   flex:1;
+  padding: 10px
+ 
 }
 
 .trash-btn, .completed-btn{
@@ -158,13 +161,14 @@ select {
 }
 
 .select::after{
-  content: "\25BC";
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem;
+  width: 2rem;
+  height: 3rem;
+  color: white;
   background: #ff6f47;
-  cursor:pointer;
   pointer-events: none;
 }
 

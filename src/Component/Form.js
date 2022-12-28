@@ -1,9 +1,6 @@
 import React from "react"
 import "../App.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faAdn,
-  } from "@fortawesome/free-brands-svg-icons";
+import { FaPlus } from "react-icons/fa";
 
 
 function Form({setInputText, todos, inputText, setTodos, setStatus}){
@@ -35,7 +32,7 @@ function Form({setInputText, todos, inputText, setTodos, setStatus}){
                 value={inputText} 
             />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
-                <FontAwesomeIcon icon={faAdn} size="2x" />
+                <FaPlus style={{fontSize: '20px'}} />
             </button>
 
             <div className="select">
